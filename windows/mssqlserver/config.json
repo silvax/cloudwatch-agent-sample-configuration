@@ -1,0 +1,94 @@
+{
+    "agent": {
+      "metrics_collection_interval": 60,
+      "logfile": "C:\\ProgramData\\Amazon\\AmazonCloudWatchAgent\\Logs\\amazon-cloudwatch-agent.log"
+    },
+    "metrics": {
+      "metrics_collected": {
+        "cpu": {
+          "measurement": [
+            "% Processor Time"
+          ],
+          "resources": [
+            "*"
+          ]
+        },
+        "memory": {
+          "measurement": [
+            "% Committed Bytes In Use"
+          ]
+        },
+        "disk": {
+          "measurement": [
+            "% Disk Time",
+            "Disk Reads/sec",
+            "Disk Writes/sec",
+            "Disk Read Bytes/sec",
+            "Disk Write Bytes/sec"
+          ],
+          "resources": [
+            "*"
+          ]
+        },
+        "network": {
+          "measurement": [
+            "Bytes Received/sec",
+            "Bytes Sent/sec",
+            "Packets Received/sec",
+            "Packets Sent/sec"
+          ],
+          "resources": [
+            "*"
+          ]
+        },
+        "mssql": {
+          "measurement": [
+            "Active Temp Tables",
+            "Backup/Restore Throughput/sec",
+            "Batch Requests/sec",
+            "Buffer Cache Hit Ratio",
+            "Checkpoint Pages/sec",
+            "Connection Memory (KB)",
+            "CPU Usage %",
+            "Database Files Size (MB)",
+            "Full Scans/sec",
+            "Lazy Writes/sec",
+            "Lock Waits/sec",
+            "Log Cache Hit Ratio",
+            "Log File(s) Size (MB)",
+            "Log Flushes/sec",
+            "Page Life Expectancy",
+            "Page Lookups/sec",
+            "Page Reads/sec",
+            "Page Splits/sec",
+            "Page Writes/sec",
+            "Slow Queries/sec",
+            "SQL Compilations/sec",
+            "SQL Re-Compilations/sec",
+            "Temp DB Size (MB)"
+          ],
+          "resources": [
+            "*"
+          ]
+        }
+      }
+    },
+    "logs": {
+      "logs_collected": {
+        "files": {
+          "collect_list": [
+            {
+              "file_path": "C:\\Program Files\\Microsoft SQL Server\\MSSQL15.MSSQLSERVER\\MSSQL\\Log\\ERRORLOG",
+              "log_group_name": "SQLServerErrorLog",
+              "log_stream_name": "{instance_id}"
+            },
+            {
+              "file_path": "C:\\Program Files\\Microsoft SQL Server\\MSSQL15.MSSQLSERVER\\MSSQL\\Log\\SQLAGENT.OUT",
+              "log_group_name": "SQLServerAgentLog",
+              "log_stream_name": "{instance_id}"
+            }
+          ]
+        }
+      }
+    }
+  }

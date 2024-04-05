@@ -1,0 +1,92 @@
+{
+    "agent": {
+      "metrics_collection_interval": 60,
+      "logfile": "C:\\ProgramData\\Amazon\\AmazonCloudWatchAgent\\Logs\\amazon-cloudwatch-agent.log"
+    },
+    "metrics": {
+      "metrics_collected": {
+        "cpu": {
+          "measurement": [
+            "% Processor Time"
+          ],
+          "resources": [
+            "*"
+          ]
+        },
+        "memory": {
+          "measurement": [
+            "% Committed Bytes In Use"
+          ]
+        },
+        "disk": {
+          "measurement": [
+            "% Disk Time",
+            "Disk Reads/sec",
+            "Disk Writes/sec",
+            "Disk Read Bytes/sec",
+            "Disk Write Bytes/sec"
+          ],
+          "resources": [
+            "*"
+          ]
+        },
+        "network": {
+          "measurement": [
+            "Bytes Received/sec",
+            "Bytes Sent/sec",
+            "Packets Received/sec",
+            "Packets Sent/sec"
+          ],
+          "resources": [
+            "*"
+          ]
+        },
+        "iis": {
+          "measurement": [
+            "Total Get Requests/Sec",
+            "Total Post Requests/Sec",
+            "Total Put Requests/Sec",
+            "Total Delete Requests/Sec",
+            "Current Connections",
+            "Anonymous Users/Sec",
+            "Total Methods/Sec",
+            "Total Blocks/Sec",
+            "Total Files Served/Sec",
+            "Total Bytes Received/Sec",
+            "Total Bytes Sent/Sec",
+            "Total Copy Requests/Sec",
+            "Total Head Requests/Sec",
+            "Total Trace Requests/Sec",
+            "Total Options Requests/Sec",
+            "Total Propfind Requests/Sec",
+            "Total Proppatch Requests/Sec",
+            "Total Mkcol Requests/Sec",
+            "Total Move Requests/Sec",
+            "Total Lock Requests/Sec",
+            "Total Unlock Requests/Sec"
+          ],
+          "resources": [
+            "*"
+          ]
+        }
+      }
+    },
+    "logs": {
+      "logs_collected": {
+        "files": {
+          "collect_list": [
+            {
+              "file_path": "C:\\inetpub\\logs\\LogFiles\\W3SVC1\\u_ex*.log",
+              "log_group_name": "IISAccessLog",
+              "log_stream_name": "{instance_id}"
+            },
+            {
+              "file_path": "C:\\Windows\\System32\\LogFiles\\HTTPERR\\*.log",
+              "log_group_name": "IISErrorLog",
+              "log_stream_name": "{instance_id}"
+            }
+          ]
+        }
+      }
+    }
+  }
